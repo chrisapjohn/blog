@@ -1,0 +1,20 @@
+<% @posts.each do |post| %>
+  <div class="panel panel-primary">
+    <div class="panel-heading"><h1 class="panel-title"><%= link_to post.title, post %></h1></div>
+    <div class="panel-body">
+      <div class="media">
+        <a class="pull-left" href="#">
+          <img class="media-object" src="..." alt="...">
+        </a>
+        <div class="media-body">
+          <%= post.body %>
+        </div>
+      </div>
+    </div>
+    <div class="panel-footer"><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+  </div>
+<% end %>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
