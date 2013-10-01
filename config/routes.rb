@@ -1,8 +1,13 @@
 Blog::Application.routes.draw do
 
+  resources :pages
+
+
   devise_for :users
 
   resources :posts
+
+  resources :users
 
   root :to => "posts#index"
 

@@ -1,11 +1,15 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <h1><%= @post.title %></h1>
 </p>
 
 <p>
-	<%= @post.updated_at.strftime("%d %b %Y") %>
+	<%= @post.user.name %> | <%= @post.updated_at.strftime("%d %b %Y") %>
+</p>
+
+<p>
+	<% if @post.image? %>
+		<%= image_tag @post.image(:medium) %>
+	<% end %>
 </p>
 
 <p>

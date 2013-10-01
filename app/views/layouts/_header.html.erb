@@ -7,17 +7,15 @@
 	      <span class="icon-bar"></span>
 	      <span class="icon-bar"></span>
 	    </button>
-	  	<a class="navbar-brand", href="/">Chris Upjohn</a>
+	  	<a class="navbar-brand", href="/">C</a>
 	  </div>
 
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
-	    <ul class="nav navbar-nav">
-	      <li><a href="/">Home</a></li>
-	      <li><a href="#">Link</a></li>
-	    </ul>
 	    <ul class="nav navbar-nav navbar-right">
-	    	<li><i class="icon-facebook-sign"></i></li>
-	    	<li><i class="icon-linkedin-sign"></i></li>
+	    	<li><%= link_to "Post", new_post_path %></li>
+	    	<% if current_user %>
+		    	<li><%= link_to "Signed in as #{current_user.name}", current_user %></li>
+	    	<% end %>
 	    </ul>
 	  </div>
 	</div>
