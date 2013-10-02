@@ -41,7 +41,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 body {
-  padding-top: 60px;
+  padding-top: 50px;
   margin: 0px;
 }
 a:focus {
@@ -209,13 +209,13 @@ textarea {
   background-image: none;
 }
 a {
-  color: #428bca;
+  color: #333333;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #2a6496;
-  text-decoration: underline;
+  color: #777777;
+  text-decoration: none;
 }
 a:focus {
   outline: thin dotted #333;
