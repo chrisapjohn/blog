@@ -4,6 +4,7 @@ gem 'rails', '3.2.14'
 gem 'jquery-rails'
 gem 'devise'
 gem "paperclip", "~> 3.0"
+gem "aws-sdk"
 gem 'exifr', :git => 'git://github.com/picuous/exifr.git'
 
 # Bundle edge Rails instead:
