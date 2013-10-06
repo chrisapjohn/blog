@@ -1,11 +1,20 @@
 <div class="box">
-  <% if post.is_blog? == false && post.image? %>
-    <%= link_to (image_tag post.image(:medium)), post %>
-  <% else %>
-  	<div class="panel-heading">
-  		<h3><%= link_to post.title, post %></h3>
-  	</div>
-  <% end %>
+  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+    <div class="flipper">
+      <div class="front">
+        <% if post.is_blog? == false && post.image? %>
+          <%= link_to (image_tag post.image_url.to_s), post %>
+        <% else %>
+        	<div class="panel-heading">
+        		<h3><%= link_to post.title, post %></h3>
+        	</div>
+        <% end %>
+      </div>
+      <div class="back">
+        <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{post.lat}%2C#{post.lng}" %>
+      </div>
+    </div>
+  </div>
   <%= link_to(post) do %>
     <div class="panel-body">
       <%= post.body %> 

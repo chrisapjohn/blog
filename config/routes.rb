@@ -2,6 +2,7 @@ Blog::Application.routes.draw do
 
   resources :pages
 
+  resources :post_images
 
   devise_for :users
 

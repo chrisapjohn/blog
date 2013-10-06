@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.14'
 gem 'jquery-rails'
 gem 'devise'
-gem "paperclip", "~> 3.0"
 gem "aws-sdk"
 gem 'exifr', :git => 'git://github.com/picuous/exifr.git'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'geocoder'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
