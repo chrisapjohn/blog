@@ -41,6 +41,8 @@ GEM
       nokogiri (>= 1.4.4, < 1.6.0)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.2)
+    bootstrap-will_paginate (0.0.6)
+      will_paginate
     builder (3.0.4)
     carrierwave (0.9.0)
       activemodel (>= 3.2.0)
@@ -145,12 +147,14 @@ GEM
     uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
+    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   aws-sdk
+  bootstrap-will_paginate
   carrierwave
   coffee-rails (~> 3.2.1)
   devise
@@ -164,3 +168,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate (~> 3.0.2)

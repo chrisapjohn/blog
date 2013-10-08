@@ -9,6 +9,8 @@ gem 'rmagick', :require => 'RMagick'
 gem 'carrierwave'
 gem 'geocoder'
 gem 'fog'
+gem "will_paginate", "~> 3.0.2"
+gem 'bootstrap-will_paginate'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
