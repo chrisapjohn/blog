@@ -5,7 +5,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem "aws-sdk"
 gem 'exifr', :git => 'git://github.com/picuous/exifr.git'
-gem 'rmagick'
+gem 'rmagick', :require => 'RMagick'
 gem 'carrierwave'
 gem 'geocoder'
 gem 'fog'
