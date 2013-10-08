@@ -8,6 +8,7 @@ gem 'exifr', :git => 'git://github.com/picuous/exifr.git'
 gem 'rmagick'
 gem 'carrierwave'
 gem 'geocoder'
+gem 'fog'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

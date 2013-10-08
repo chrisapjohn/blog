@@ -1,9 +1,11 @@
 <p>
-  <h1><%= @post.title %></h1>
+	<% if @post.title? %>
+  	<h1><%= @post.title %></h1>
+  <% end %>
 </p>
 
 <p>
-	<%= @post.user.name %> | <%= @post.updated_at.strftime("%d %b %Y") %>
+	Posted by <%= @post.user.name %> | <%= @post.updated_at.strftime("%d %b %Y") %>
 </p>
 
 <p>
@@ -13,18 +15,20 @@
 </p>
 
 <p>
-	<% if @post.image? %>
+	<% if @post.lat? %>
 		<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@post.lat}%2C#{@post.lng}" %>
 	<% end %>
 </p>
 
 <p>
-  <%= @post.body %>
+  <% if @post.body? %>
+  	<%= @post.body %>
+  <% end %>
 </p>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path, :class => "btn btn-info btn-lg" %>
 
 <% if @post.user == current_user %>
-	 | <%= link_to 'Edit', edit_post_path(@post) %> | 
-	 <%= link_to 'Erase', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+	 <%= link_to 'Edit', edit_post_path(@post), :class => "btn btn-warning btn-lg" %>
+	 <%= link_to 'Erase', @post, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-lg" %>
 <% end %>

@@ -1,8 +1,7 @@
 <%= form_for @post, :html => {:multipart => true} do |f| %>
   <% if @post.errors.any? %>
-    <div id="error_explanation">
+    <div class="alert alert-error">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,18 +10,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
+  <br/>
+
+  <div class="form-group">
+    <%= f.text_field :title, :class => "form-control", :autofocus => "true", :placeholder => "Title (optional)" %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_field :body %>
+  <div class="form-group">
+    <%= f.text_area :body, class: "form-control", placeholder: "Body (optional)", rows: "5" %>
   </div>
-  <div class="field">
-    <%= f.file_field :image %>
+  <div class="form-group">
+    <%= f.file_field :image, :class => "btn btn-default btn-lg" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+      <%= f.submit "Post", :class => "btn btn-info btn-lg" %>
+      <%= link_to 'Back', posts_path, :class => "btn btn-default btn-lg" %>
   </div>
 <% end %>
